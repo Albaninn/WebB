@@ -76,17 +76,18 @@
     
     <body>
         <form action="processar_pedido.html" method="post">
-            <table border="1" bgcolor="grey">
-                <tr>
-                    <td><label for="nome"><font color="black">Nome:</font></label></td>
-                    <td><input type="text" id="nome" name="nome" placeholder="Nome" pattern="[A-z]{1,20}" maxlength="20" required><br></td>
-                </tr>
-                <tr>
-                    <td><label for="cpf"><font color="black">Cpf:</font></label></td>
-                    <td><input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" required><br></td>
-                </tr>
-            </table><br/>
-            
+            <div>
+                <table border="1" bgcolor="grey">
+                    <tr>
+                        <td><label for="nome"><font color="black">Nome:</font></label></td>
+                        <td><input type="text" id="nome" name="nome" placeholder="Nome" pattern="[A-z]{1,20}" maxlength="20" required><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cpf"><font color="black">Cpf:</font></label></td>
+                        <td><input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" required><br></td>
+                    </tr>
+                </table><br/>
+            </div>
             <input type="submit" value="Login">
         </form>
     </body>

@@ -3,9 +3,11 @@
         <title>Banco Pyramide</title>
         <style>
             *{padding: 0; margin: 0; box-sizing: border-box;}
-            body{height: 900px;}
+            body{
+                text-align: center;
+            }
             header {
-                background: rgb(255, 255, 255);
+                background: rgb(157, 160, 160);
                 color: rgb(255, 255, 255);
                 
                 width: 100%;
@@ -14,17 +16,21 @@
                 background-attachment: fixed;
                 position: relative;
                 overflow: hidden;
-                border-radius: 0 0 85% 85% / 30%;
+                /*border-radius: 0 0 85% 85% / 30%;*/
             }
             header .overlay{
                 text-align: center;
                 width: 100%;
-                height: 100%;
+                height: 900px;
                 padding: 100px;
                 color: #ffffff;
                 text-shadow: 1px 1px 1px #979797;
-            background-image: linear-gradient( 135deg, #450070c0 20%, #08c2b9 100%);
+                background-image: linear-gradient( 135deg, #450070c0 20%, #08c2b9 100%);
                 
+            }
+            div .diva {
+                padding-left: 20px; /* Espaçamento à esquerda */
+                padding-right: 20px; /* Espaçamento à direita */
             }
 
             h1 {
@@ -49,17 +55,41 @@
                 box-shadow: 0 3px 20px 0 #0000003b;
             }
             nav {
+                position: fixed; /* Fixa o nav no topo da página */
+                top: 0; /* Define a posição superior como 0 para ficar no topo */
+                width: 100%; /* Define a largura como 100% para ocupar toda a largura da tela */
+                background-color: rgb(157, 160, 160); /* Cor de fundo do nav */
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 20px;
+                /*padding: 20px;*/
             }
             .nav-buttons {
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                padding: 20px;
             }
             button:hover{
                 cursor: pointer;
+            }
+            table {
+                margin-top: 50px; /* Adiciona um espaçamento superior para evitar sobreposição com o nav */
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                border-collapse: collapse; /* Para juntar as bordas das células da tabela */
+            }
+            table, th, td {
+                border: 1px solid #000; /* Adiciona uma borda às células da tabela */
+            }
+            th, td {
+                padding: 15px; /* Adiciona um espaçamento interno nas células */
+                text-align: left; /* Alinha o texto à esquerda nas células */
+            }
+            th {
+                background-color: grey; /* Cor de fundo para as células do cabeçalho da tabela */
+                color: white; /* Cor do texto no cabeçalho */
             }
         </style>
     </head>
@@ -70,10 +100,11 @@
                 <button><a href='home.html'>Home</a></button>
                 <button><a href='n_hist.html'>Nossa história</a></button>
                 <button><a href='login.html'>Login</a></button>
+                <button><a href='cadastro.html'>Abra sua conta</a></button>
             </div>
         </nav>
         <div class="overlay">
-            <img src="imagens/Logo_.png" width="45%">
+            <img src="imagens/Logo_.png" width="400">
             <br>
             <br>
             <h3>Razão para nos escolher</h3>
@@ -85,30 +116,32 @@
     </header>
     
     <body>
-        <table>
-            <tr>
-                <td>Com uma ampla rede de agências em todo o país, você nunca estará longe de uma filial da Rede Bancária Pirâmide. Além disso, nossa plataforma de serviços bancários online e aplicativo móvel intuitivo permitem que você acesse sua conta a qualquer hora, em qualquer lugar. Faça pagamentos, verifique saldos e gerencie suas finanças com facilidade.</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Na Rede Bancária Pirâmide, acreditamos que você merece economizar dinheiro enquanto cuida do seu patrimônio. Nossas taxas de juros competitivas em empréstimos e contas de poupança garantem que você obtenha o melhor retorno sobre seus investimentos.</td>
-            </tr>
-            <tr>
-                <td>Nossa equipe de especialistas em finanças está pronta para atender às suas necessidades específicas. Valorizamos cada cliente e trabalhamos para entender seus objetivos financeiros. Seja para planejar uma aposentadoria segura, obter um empréstimo para a compra da casa dos seus sonhos ou investir em seu futuro, estamos aqui para ajudar.</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>A segurança é uma preocupação primordial na Rede Bancária Pirâmide. Utilizamos tecnologias avançadas para proteger suas informações e transações, garantindo que suas finanças permaneçam seguras. Além disso, oferecemos serviços de monitoramento de identidade e proteção contra fraudes para manter você e sua família protegidos.</td>
-            </tr>
-            <tr>
-                <td>Nossos clientes fiéis são recompensados na Rede Bancária Pirâmide. Com nosso programa de recompensas exclusivo, você ganha pontos em cada transação e pode trocá-los por viagens, produtos eletrônicos e muito mais. Quanto mais você utiliza nossos serviços, mais benefícios recebe.
+        <div>
+            <table>
+                <tr>
+                    <td>Com uma ampla rede de agências em todo o país, você nunca estará longe de uma filial da Rede Bancária Pirâmide. Além disso, nossa plataforma de serviços bancários online e aplicativo móvel intuitivo permitem que você acesse sua conta a qualquer hora, em qualquer lugar. Faça pagamentos, verifique saldos e gerencie suas finanças com facilidade.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Na Rede Bancária Pirâmide, acreditamos que você merece economizar dinheiro enquanto cuida do seu patrimônio. Nossas taxas de juros competitivas em empréstimos e contas de poupança garantem que você obtenha o melhor retorno sobre seus investimentos.</td>
+                </tr>
+                <tr>
+                    <td>Nossa equipe de especialistas em finanças está pronta para atender às suas necessidades específicas. Valorizamos cada cliente e trabalhamos para entender seus objetivos financeiros. Seja para planejar uma aposentadoria segura, obter um empréstimo para a compra da casa dos seus sonhos ou investir em seu futuro, estamos aqui para ajudar.</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>A segurança é uma preocupação primordial na Rede Bancária Pirâmide. Utilizamos tecnologias avançadas para proteger suas informações e transações, garantindo que suas finanças permaneçam seguras. Além disso, oferecemos serviços de monitoramento de identidade e proteção contra fraudes para manter você e sua família protegidos.</td>
+                </tr>
+                <tr>
+                    <td>Nossos clientes fiéis são recompensados na Rede Bancária Pirâmide. Com nosso programa de recompensas exclusivo, você ganha pontos em cada transação e pode trocá-los por viagens, produtos eletrônicos e muito mais. Quanto mais você utiliza nossos serviços, mais benefícios recebe.
 
-                    Na Rede Bancária Pirâmide, estamos comprometidos em tornar a sua jornada financeira mais fácil e recompensadora. Descubra como nossos serviços podem ajudá-lo a atingir seus objetivos financeiros enquanto desfruta da paz de espírito que você merece. Junte-se a nós hoje mesmo e experimente a diferença que fazemos em sua vida financeira.</td>
-                <td></td>
-            </tr>
+                        Na Rede Bancária Pirâmide, estamos comprometidos em tornar a sua jornada financeira mais fácil e recompensadora. Descubra como nossos serviços podem ajudá-lo a atingir seus objetivos financeiros enquanto desfruta da paz de espírito que você merece. Junte-se a nós hoje mesmo e experimente a diferença que fazemos em sua vida financeira.</td>
+                    <td></td>
+                </tr>
 
-        </table>
+            </table>
+        </div>
     </body>
 </html>
