@@ -1,121 +1,142 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Banco Pyramide</title>
-        <style>
-            *{padding: 0; margin: 0; box-sizing: border-box;}
-            body{
-                text-align: center;
-            }
-            header {
-                background: rgb(157, 160, 160);
-                color: rgb(255, 255, 255);
-                
-                width: 100%;
-                height: auto;
-                background-size: cover;
-                background-attachment: fixed;
-                position: relative;
-                overflow: hidden;
-                /*border-radius: 0 0 85% 85% / 30%;*/
-            }
-            header .overlay{
-                text-align: center;
-                width: 100%;
-                height: 900px;
-                padding: 100px;
-                color: #ffffff;
-                text-shadow: 1px 1px 1px #979797;
-                background-image: linear-gradient( 135deg, #450070c0 20%, #08c2b9 100%);
-                
-            }
-            div .diva {
-                padding-left: 20px; /* Espaçamento à esquerda */
-                padding-right: 20px; /* Espaçamento à direita */
-            }
+<head>
+    <title>Banco Pyramide</title>
+    <style>
+        *{padding: 0; margin: 0; box-sizing: border-box;}
+        body{
+            text-align: center;
+        }
+        header {
+            background: rgb(255, 255, 255);
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            overflow: hidden;
+            /*border-radius: 0 0 85% 85% / 30%;*/
+        }
+        header .overlay{
+            text-align: center;
+            width: 100%;
+            height: 60%;
+            padding: 50px;
+            color: #ffffff;
+            text-shadow: 1px 1px 1px #450070c0;
+            background-image: linear-gradient( 135deg, #450070c0 20%, #08c2b9 100%);
+        }
 
-            h1 {
-                font-family: 'Herculanum';
-                font-size: 80px;
-                margin-bottom: 30px;
-            }
+        h1 {
+            font-family: 'Herculanum';
+            font-size: 80px;
+            margin-bottom: 30px;
+        }
 
-            h3, p {
-                font-family: 'Open Sans', sans-serif;
-                margin-bottom: 30px;
-            }
+        h3, p {
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 30px;
+        }
 
-            button {
-                border: none;
-                outline: none;
-                padding: 10px 20px;
-                border-radius: 50px;
-                color: #333;
-                background: #fff;
-                margin-bottom: 50px;
-                box-shadow: 0 3px 20px 0 #0000003b;
-            }
-            nav {
-                position: fixed; /* Fixa o nav no topo da página */
-                top: 0; /* Define a posição superior como 0 para ficar no topo */
-                width: 100%; /* Define a largura como 100% para ocupar toda a largura da tela */
-                background-color: rgb(157, 160, 160); /* Cor de fundo do nav */
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                /*padding: 20px;*/
-            }
-            .nav-buttons {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 20px;
-            }
-            button:hover{
-                cursor: pointer;
-            }
-            table {
-                margin-top: 50px; /* Adiciona um espaçamento superior para evitar sobreposição com o nav */
-                width: 80%;
-                margin-left: auto;
-                margin-right: auto;
-                border-collapse: collapse; /* Para juntar as bordas das células da tabela */
-            }
-            table, th, td {
-                border: 1px solid #000; /* Adiciona uma borda às células da tabela */
-            }
-            th, td {
-                padding: 15px; /* Adiciona um espaçamento interno nas células */
-                text-align: left; /* Alinha o texto à esquerda nas células */
-            }
-            th {
-                background-color: grey; /* Cor de fundo para as células do cabeçalho da tabela */
-                color: white; /* Cor do texto no cabeçalho */
-            }
-        </style>
-    </head>
-    <header>
-        <nav>
-            <img src="imagens/Logo_3.png" width="15%">
-            <div class="nav-buttons">
-                <button><a href='home.html'>Home</a></button>
-                <button><a href='n_hist.html'>Nossa história</a></button>
-                <button><a href='login.html'>Login</a></button>
-                <button><a href='cadastro.html'>Abra sua conta</a></button>
-            </div>
-        </nav>
-        <div class="overlay">
-            <img src="imagens/Logo_.png" width="400">
-            <br>
-            <br>
-            <h3>Razão para nos escolher</h3>
-            <p>Na era moderna, escolher o banco certo é crucial para o sucesso financeiro e a tranquilidade. Apresentamos a você a Rede Bancária Pirâmide, onde a sua segurança e conveniência são nossa prioridade número um. Nossos clientes desfrutam de uma gama de benefícios exclusivos que fazem da Pirâmide a escolha inteligente para todas as suas necessidades financeiras</p>
-            <br>
-            <button><a href='cadastro.html'>Abra sua conta</a></button>
-		</div>
+        nav {
+            position: fixed; /* Fixa o nav no topo da página */
+            top: 0; /* Define a posição superior como 0 para ficar no topo da página */
+            width: 100%; /* Define a largura como 100% para ocupar toda a largura da tela */
+            background-color: rgb(255, 255, 255); /* Cor de fundo do nav */
+            display: flex; /* Usa o modelo flexbox para organizar os elementos filhos */
+            justify-content: space-between; /* Distribui o espaço entre os elementos filhos igualmente */
+            align-items: center; /* Alinha verticalmente os elementos filhos ao centro */
+            padding: 20px;
+        }
 
-    </header>
-    
+        .nav-buttons {
+            display: flex; /* Usa o modelo flexbox para organizar os elementos filhos */
+            width: 40%; /* Define a largura dos elementos filhos como 40% da largura do nav */
+            align-items: center; /* Alinha verticalmente os elementos filhos ao centro */
+            justify-content: space-between; /* Distribui o espaço entre os elementos filhos igualmente */
+            /*margin-top: 20px;  Adiciona um espaçamento superior entre o nav e os botões */
+            /*padding: 20px; Comentado para remover o espaçamento interno dos botões */
+        }
+
+        button {
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: #333;
+            background: #fff;
+            margin: 0 10px;
+            box-shadow: 0 3px 20px 0 #0000003b;
+            cursor: pointer;
+        }
+        .cab {
+            background: #ffffff;
+            color: #fff;
+        }
+
+        button:hover{
+            background: #ddd;
+        }
+        table {
+            margin-top: 50px; /* Adiciona um espaçamento superior para evitar sobreposição com o nav */
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse; /* Para juntar as bordas das células da tabela */
+            margin-bottom: 50px;
+        }
+        img {
+            max-width: 100%;
+        }
+        footer {
+            background-color: #000; /* Cor de fundo preta */
+            color: #fff; /* Cor do texto branco */
+            padding: 20px; /* Espaçamento interno */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 150px; /* Tamanho da logo */
+        }
+
+        .social-media {
+            display: flex;
+            gap: 10px; /* Espaçamento entre os ícones de mídia social */
+        }
+
+        .sac {
+            text-align: right;
+        }
+    </style>
+</head>
+
     <body>
+        <header>
+            <nav>
+                <img src="imagens/Logo_3.png" width="150">
+                <div class="nav-buttons">
+                    <button><a href='home.html'>Home</a></button>
+                    <button><a href='n_hist.html'>Nossa história</a></button>
+                    <button><a href='login.html'>Login</a></button>
+                    <button><a href='cadastro.html'>Abra sua conta</a></button>
+                </div>
+            </nav>
+            <div class="overlay">
+                <br>
+                <br>
+                <img src="imagens/Logo_.png" width="400">
+                <br>
+                <br>
+                <h3>Razão para nos escolher</h3>
+                <p>Na era moderna, escolher o banco certo é crucial para o sucesso financeiro e a tranquilidade. Apresentamos a você a Rede Bancária Pirâmide, onde a sua segurança e conveniência são nossa prioridade número um. Nossos clientes desfrutam de uma gama de benefícios exclusivos que fazem da Pirâmide a escolha inteligente para todas as suas necessidades financeiras</p>
+                <br>
+                <button class="cab"><a href='cadastro.html'>Abra sua conta</a></button>
+            </div>
+
+        </header>
+
         <div>
             <table>
                 <tr>
@@ -143,5 +164,15 @@
 
             </table>
         </div>
+        <footer>
+            <div>
+                <img src="imagens/Logo_2.png" alt="Logo da Empresa" class="footer-logo">
+            </div>
+            
+            <div class="sac">
+                <p>SAC Pyramide Negocios: 0800-123-4567</p>
+                <p><a href="#"><img src="imagens/gplay.png" width="100"> <img src="imagens/astore.png" width="100"></a></p>
+            </div>
+        </footer>
     </body>
 </html>
