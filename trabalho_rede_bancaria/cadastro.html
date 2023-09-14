@@ -3,41 +3,60 @@
         <title>Banco Pyramide</title>
         <style>
             *{padding: 0; margin: 0; box-sizing: border-box;}
-            body{height: 900px;}
+            body{
+                text-align: center;
+            }
             header {
                 background: rgb(255, 255, 255);
-                color: rgb(255, 255, 255);
-                
                 width: 100%;
                 height: auto;
                 background-size: cover;
                 background-attachment: fixed;
                 position: relative;
                 overflow: hidden;
-                border-radius: 0 0 85% 85% / 30%;
+                /*border-radius: 0 0 85% 85% / 30%;*/
             }
             header .overlay{
                 text-align: center;
                 width: 100%;
-                height: 100%;
-                padding: 100px;
+                height: 60%;
+                padding: 50px;
                 color: #ffffff;
-                text-shadow: 1px 1px 1px #979797;
-            background-image: linear-gradient( 135deg, #450070c0 20%, #08c2b9 100%);
-                
+                text-shadow: 1px 1px 1px #450070c0;
+                background-image: linear-gradient( 135deg, #450070c0 20%, #08c2b9 100%);
             }
-
+    
             h1 {
                 font-family: 'Herculanum';
                 font-size: 80px;
                 margin-bottom: 30px;
             }
-
+    
             h3, p {
                 font-family: 'Open Sans', sans-serif;
                 margin-bottom: 30px;
             }
-
+    
+            nav {
+                position: fixed; /* Fixa o nav no topo da página */
+                top: 0; /* Define a posição superior como 0 para ficar no topo da página */
+                width: 100%; /* Define a largura como 100% para ocupar toda a largura da tela */
+                background-color: rgb(255, 255, 255); /* Cor de fundo do nav */
+                display: flex; /* Usa o modelo flexbox para organizar os elementos filhos */
+                justify-content: space-between; /* Distribui o espaço entre os elementos filhos igualmente */
+                align-items: center; /* Alinha verticalmente os elementos filhos ao centro */
+                padding: 20px;
+            }
+    
+            .nav-buttons {
+                display: flex; /* Usa o modelo flexbox para organizar os elementos filhos */
+                width: 40%; /* Define a largura dos elementos filhos como 40% da largura do nav */
+                align-items: center; /* Alinha verticalmente os elementos filhos ao centro */
+                justify-content: space-between; /* Distribui o espaço entre os elementos filhos igualmente */
+                /*margin-top: 20px;  Adiciona um espaçamento superior entre o nav e os botões */
+                /*padding: 20px; Comentado para remover o espaçamento interno dos botões */
+            }
+    
             button {
                 border: none;
                 outline: none;
@@ -45,50 +64,143 @@
                 border-radius: 50px;
                 color: #333;
                 background: #fff;
-                margin-bottom: 50px;
+                margin: 0 10px;
                 box-shadow: 0 3px 20px 0 #0000003b;
+                cursor: pointer;
             }
-            nav {
+            .cab {
+                background: #ffffff;
+                color: #fff;
+            }
+    
+            button:hover{
+                background: #ddd;
+            }
+            .custom-button {
+                background-color: #08c2b9; /* Cor de fundo */
+                color: #fff; /* Cor do texto */
+                padding: 10px 20px; /* Espaçamento interno */
+                border: none; /* Remove a borda padrão */
+                border-radius: 5px; /* Borda arredondada */
+                cursor: pointer; /* Altera o cursor para uma mão ao passar o mouse */
+            }
+
+            /* Estilizar o botão quando o mouse passar por cima */
+            .custom-button:hover {
+                background-color: #450070c0; /* Cor de fundo alterada */
+            }
+            table {
+                margin-top: 200px; /* Reduzi o espaçamento superior para que a tabela não fique muito próxima ao cabeçalho */
+                margin-bottom: 200px; /* Reduzi o espaçamento inferior para manter um espaço adequado no rodapé */
+                margin-left: auto;
+                margin-right: auto;
+                border-collapse: separate;
+                border-spacing: 0 10px; /* Adicionei um espaçamento vertical entre as células para criar o efeito de relevo */
+                box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adicionei uma sombra para dar a impressão de relevo */
+            }
+
+            /* Estilo para as células da tabela */
+            th, td {
+                padding: 15px;
+                text-align: left;
+                border-bottom: 1px solid #ddd; /* Adicionei uma borda inferior nas células para separá-las */
+            }
+
+            /* Estilo para o cabeçalho da tabela */
+            th {
+                background-color: grey;
+                color: white;
+            }
+            img {
+                max-width: 100%;
+            }
+            footer {
+                background-color: #000; /* Cor de fundo preta */
+                color: #fff; /* Cor do texto branco */
+                padding: 20px; /* Espaçamento interno */
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 20px;
             }
-            .nav-buttons {
+    
+            .footer-logo {
+                width: 150px; /* Tamanho da logo */
+            }
+    
+            .social-media {
                 display: flex;
-                align-items: center;
+                gap: 10px; /* Espaçamento entre os ícones de mídia social */
             }
-            button:hover{
-                cursor: pointer;
+    
+            .sac {
+                text-align: right;
             }
         </style>
     </head>
     <header>
         <nav>
-            <img src="imagens/Logo_3.png" width="25%">
+            <img src="imagens/Logo_3.png" width="150">
             <div class="nav-buttons">
                 <button><a href='home.html'>Home</a></button>
                 <button><a href='n_hist.html'>Nossa história</a></button>
                 <button><a href='login.html'>Login</a></button>
+                <button><a href='cadastro.html'>Abra sua conta</a></button>
             </div>
         </nav>
     </header>
     
     <body>
-        <table>
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-
-        </table>
+        <form action="sua_conta.html" method="post">
+            <div>
+                <table>
+                    <tr>
+                        <td><label for="nome"><font color="black">Nome:</font></label></td>
+                        <td><input type="text" id="nome" name="nome" placeholder="Nome" pattern="[A-z]{1,20}" maxlength="20" required><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="cpf"><font color="black">Cpf:</font></label></td>
+                        <td><input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" required><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email"><font color="black">Email:</font></label></td>
+                        <td><input type="email" id="email" name="email" placeholder="email@exemplo.com" required><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="celular"><font color="black">Celular:</font></label></td>
+                        <td><input type="text" id="celular" name="celular" placeholder="(00) 00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="senha"><font color="black">Senha:</font></label></td>
+                        <td>
+                            <input type="password" id="senha" name="senha" placeholder="Senha" 
+                                   pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$"
+                                   title="A senha deve conter pelo menos 1 letra maiúscula, 1 letra minúscula, 1 número, 1 caractere especial (@, $, !, %, *, ?, &), e ter de 8 a 20 caracteres."
+                                   required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="confirmaSenha"><font color="black">Confirme a Senha:</font></label></td>
+                        <td>
+                            <input type="password" id="confirmaSenha" name="confirmaSenha" placeholder="Confirme a Senha" 
+                                   pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$"
+                                   title="Repita a senha anterior."
+                                   required>
+                        </td>
+                    </tr>
+                    <tr><td></td><td><input type="submit" value="Cadastrar" class="custom-button"></td></tr>
+                </table><br/>
+            </div>
+            
+        </form>
+        <footer>
+            <div>
+                <img src="imagens/Logo_2.png" alt="Logo da Empresa" class="footer-logo">
+            </div>
+            
+            <div class="sac">
+                <p>SAC Pyramide Negocios: 0800-123-4567</p>
+                <p><a href="#"><img src="imagens/gplay.png" width="100"> <img src="imagens/astore.png" width="100"></a></p>
+            </div>
+        </footer>
     </body>
 </html>

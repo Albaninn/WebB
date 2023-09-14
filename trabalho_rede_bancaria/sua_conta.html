@@ -53,6 +53,8 @@
                 width: 40%; /* Define a largura dos elementos filhos como 40% da largura do nav */
                 align-items: center; /* Alinha verticalmente os elementos filhos ao centro */
                 justify-content: space-between; /* Distribui o espaço entre os elementos filhos igualmente */
+                /*margin-top: 20px;  Adiciona um espaçamento superior entre o nav e os botões */
+                /*padding: 20px; Comentado para remover o espaçamento interno dos botões */
             }
     
             button {
@@ -73,19 +75,6 @@
     
             button:hover{
                 background: #ddd;
-            }
-            .custom-button {
-                background-color: #08c2b9; /* Cor de fundo */
-                color: #fff; /* Cor do texto */
-                padding: 10px 20px; /* Espaçamento interno */
-                border: none; /* Remove a borda padrão */
-                border-radius: 5px; /* Borda arredondada */
-                cursor: pointer; /* Altera o cursor para uma mão ao passar o mouse */
-            }
-
-            /* Estilizar o botão quando o mouse passar por cima */
-            .custom-button:hover {
-                background-color: #450070c0; /* Cor de fundo alterada */
             }
             table {
                 margin-top: 200px; /* Reduzi o espaçamento superior para que a tabela não fique muito próxima ao cabeçalho */
@@ -114,7 +103,6 @@
                 max-width: 100%;
             }
             footer {
-                position: relative;
                 background-color: #000; /* Cor de fundo preta */
                 color: #fff; /* Cor do texto branco */
                 padding: 20px; /* Espaçamento interno */
@@ -150,24 +138,27 @@
     </header>
     
     <body>
-        <form action="sua_conta.html" method="post">
-            <div>
-                <table>
-                    <tr>
-                        <td><label for="cpf"><font color="black">Cpf:</font></label></td>
-                        <td><input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" required><br></td>
-                    </tr>
-                    <tr>
-                        <td><label for="senha"><font color="black">Senha:</font></label></td>
-                        <td>
-                            <input type="password" id="senha" name="senha" placeholder="Senha" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$"required>
-                        </td>
-                    </tr>
-                    <tr><td></td><td><input type="submit" value="Login" class="custom-button"></td></tr>
-                </table><br/>
-            </div>
-            
-        </form>
+        <table>
+            <tr>
+                <th colspan="2">Informações da Sua Conta</th>
+            </tr>
+            <tr>
+                <td>Saldo Disponível:</td>
+                <td>R$ 10,000.00</td>
+            </tr>
+            <tr>
+                <td>Saldo Total:</td>
+                <td>R$ 15,000.00</td>
+            </tr>
+            <tr>
+                <td>Últimas Transações:</td>
+                <td><a href="#">Ver histórico</a></td>
+            </tr>
+            <tr>
+                <td>Cartões de Crédito:</td>
+                <td><a href="#">Gerenciar cartões</a></td>
+            </tr>
+        </table>
         <footer>
             <div>
                 <img src="imagens/Logo_2.png" alt="Logo da Empresa" class="footer-logo">

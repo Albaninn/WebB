@@ -3,41 +3,49 @@
         <title>Banco Pyramide</title>
         <style>
             *{padding: 0; margin: 0; box-sizing: border-box;}
-            body{height: 900px;}
+            body{
+                text-align: center;
+            }
             header {
                 background: rgb(255, 255, 255);
-                color: rgb(255, 255, 255);
-                
                 width: 100%;
                 height: auto;
                 background-size: cover;
                 background-attachment: fixed;
                 position: relative;
                 overflow: hidden;
-                border-radius: 0 0 85% 85% / 30%;
+                /*border-radius: 0 0 85% 85% / 30%;*/
             }
-            header .overlay{
-                text-align: center;
-                width: 100%;
-                height: 100%;
-                padding: 100px;
-                color: #ffffff;
-                text-shadow: 1px 1px 1px #979797;
-            background-image: linear-gradient( 135deg, #450070c0 20%, #08c2b9 100%);
-                
-            }
-
+               
             h1 {
                 font-family: 'Herculanum';
                 font-size: 80px;
                 margin-bottom: 30px;
             }
-
+    
             h3, p {
                 font-family: 'Open Sans', sans-serif;
                 margin-bottom: 30px;
             }
-
+    
+            nav {
+                position: fixed; /* Fixa o nav no topo da página */
+                top: 0; /* Define a posição superior como 0 para ficar no topo da página */
+                width: 100%; /* Define a largura como 100% para ocupar toda a largura da tela */
+                background-color: rgb(255, 255, 255); /* Cor de fundo do nav */
+                display: flex; /* Usa o modelo flexbox para organizar os elementos filhos */
+                justify-content: space-between; /* Distribui o espaço entre os elementos filhos igualmente */
+                align-items: center; /* Alinha verticalmente os elementos filhos ao centro */
+                padding: 20px;
+            }
+    
+            .nav-buttons {
+                display: flex; /* Usa o modelo flexbox para organizar os elementos filhos */
+                width: 40%; /* Define a largura dos elementos filhos como 40% da largura do nav */
+                align-items: center; /* Alinha verticalmente os elementos filhos ao centro */
+                justify-content: space-between; /* Distribui o espaço entre os elementos filhos igualmente */
+            }
+    
             button {
                 border: none;
                 outline: none;
@@ -45,50 +53,161 @@
                 border-radius: 50px;
                 color: #333;
                 background: #fff;
-                margin-bottom: 50px;
+                margin: 0 10px;
                 box-shadow: 0 3px 20px 0 #0000003b;
+                cursor: pointer;
             }
-            nav {
+            .cab {
+                background: #ffffff;
+                color: #fff;
+            }
+    
+            button:hover{
+                background: #ddd;
+            }
+            table {
+                margin-top: 50px; /* Adiciona um espaçamento superior para evitar sobreposição com o nav */
+                width: 80%;
+                margin: 0 auto;
+                border-collapse: separate;
+                border-spacing: 20px;
+            }
+
+            th {
+                text-align: left;
+            }
+
+            td {
+                vertical-align: top;
+            }
+
+            .topic {
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .description {
+                font-size: 16px;
+            }
+
+            .image {
+                max-width: 100%;
+                height: auto;
+            }
+            img {
+                max-width: 100%;
+            }
+            footer {
+                background-color: #000; /* Cor de fundo preta */
+                color: #fff; /* Cor do texto branco */
+                padding: 20px; /* Espaçamento interno */
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 20px;
             }
-            .nav-buttons {
+    
+            .footer-logo {
+                width: 150px; /* Tamanho da logo */
+            }
+    
+            .social-media {
                 display: flex;
-                align-items: center;
+                gap: 10px; /* Espaçamento entre os ícones de mídia social */
             }
-            button:hover{
-                cursor: pointer;
+    
+            .sac {
+                text-align: right;
             }
         </style>
     </head>
     <header>
         <nav>
-            <img src="imagens/Logo_3.png" width="25%">
+            <img src="imagens/Logo_3.png" width="150">
             <div class="nav-buttons">
                 <button><a href='home.html'>Home</a></button>
                 <button><a href='n_hist.html'>Nossa história</a></button>
                 <button><a href='login.html'>Login</a></button>
+                <button><a href='cadastro.html'>Abra sua conta</a></button>
             </div>
         </nav>
     </header>
     
     <body>
-        <table>
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-
-        </table>
+        <div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <table>
+                <tr class="topic">
+                    <td class="description">
+                        <h2>2013: Fundação do Banco Pyramide</h2>
+                        <p>Em 2013, o Banco Pyramide foi fundado por um grupo de empreendedores visionários que buscavam criar uma instituição financeira que oferecesse serviços inovadores e atendimento personalizado aos clientes. Começaram com uma única agência em uma pequena cidade.</p>
+                    </td>
+                    <td class="image"><img src="imagem_2013.jpg" alt="Imagem 2013"></td>
+                </tr>
+                <tr class="topic">
+                    <td class="image"><img src="imagem_2014.jpg" alt="Imagem 2014"></td>
+                    <td class="description">
+                        <h2>2014: Primeiras Parcerias Locais</h2>
+                        <p>No segundo ano de operações, o Banco Pyramide estabeleceu suas primeiras parcerias com empresas locais, oferecendo soluções financeiras sob medida para pequenos negócios e empreendedores.</p>
+                    </td>
+                </tr>
+                <tr class="topic">
+                    <td class="description">
+                        <h2>2015: Lançamento da Plataforma Online</h2>
+                        <p>Em 2015, o Banco Pyramide lançou sua plataforma online, permitindo que os clientes acessem suas contas, façam transações e gerenciem suas finanças remotamente. Isso ampliou significativamente sua presença e comodidade.</p>
+                    </td>
+                    <td class="image"><img src="imagem_2015.jpg" alt="Imagem 2015"></td>
+                </tr>
+                <tr class="topic">
+                    <td class="image"><img src="imagem_2018.jpg" alt="Imagem 2018"></td>
+                    <td class="description">
+                        <h2>2018: Expansão Nacional</h2>
+                        <p>Em apenas cinco anos, o Banco Pyramide expandiu rapidamente, abrindo agências em várias cidades do país. Sua abordagem centrada no cliente e serviços de qualidade começaram a atrair uma base de clientes leais.</p>
+                    </td>
+                </tr>
+                <tr class="topic">
+                    <td class="description">
+                        <h2>2021: Programa de Recompensas</h2>
+                        <p>Para recompensar a fidelidade dos clientes, o Banco Pyramide introduziu um programa de recompensas em 2021. Os clientes passaram a ganhar pontos em cada transação, o que podiam trocar por produtos, viagens e benefícios exclusivos.</p>
+                    </td>
+                    <td class="image"><img src="imagem_2021.jpg" alt="Imagem 2021"></td>
+                </tr>
+                <tr class="topic">
+                    <td class="image"><img src="imagem_2023.jpg" alt="Imagem 2023"></td>
+                    <td class="description">
+                        <h2>2023: Internacionalização</h2>
+                        <p>O Banco Pyramide deu início à sua expansão internacional em 2023, abrindo agências em países vizinhos. Isso o tornou uma presença global no setor bancário.</p>
+                    </td>
+                </tr>
+                <tr class="topic">
+                    <td class="description">
+                        <h2>2026: Inovação em Tecnologia Financeira</h2>
+                        <p>Em 2026, o Banco Pyramide se destacou por suas inovações em tecnologia financeira, lançando soluções avançadas, como pagamentos por reconhecimento facial e serviços de consultoria financeira virtual.</p>
+                    </td>
+                    <td class="image"><img src="imagem_2026.jpg" alt="Imagem 2026"></td>
+                </tr>
+                <tr class="topic">
+                    <td class="image"><img src="imagem_2033.jpg" alt="Imagem 2033"></td>
+                    <td class="description">
+                        <h2>2033: Líder no Setor</h2>
+                        <p>Ao completar 20 anos de operações em 2033, o Banco Pyramide se consolidou como líder no setor bancário, oferecendo uma ampla gama de serviços financeiros, desde contas correntes até investimentos sofisticados. Com uma base de clientes internacional e uma reputação de confiança, o Banco Pyramide continuou a crescer, mantendo seu compromisso com o atendimento ao cliente de alta qualidade e inovação constante.</p>
+                    </td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário para os anos subsequentes -->
+            </table>
+            
+        </div>
+        <footer>
+            <div>
+                <img src="imagens/Logo_2.png" alt="Logo da Empresa" class="footer-logo">
+            </div>
+            
+            <div class="sac">
+                <p>SAC Pyramide Negocios: 0800-123-4567</p>
+                <p><a href="#"><img src="imagens/gplay.png" width="100"> <img src="imagens/astore.png" width="100"></a></p>
+            </div>
+        </footer>
     </body>
 </html>
