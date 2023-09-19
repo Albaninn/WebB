@@ -3,7 +3,12 @@
     <title>Banco Pyramide - Cartões</title>
     <style>
         * { padding: 0; margin: 0; box-sizing: border-box; }
-        body { text-align: center; }
+        body {  
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column; 
+        }
         header {
             background: rgb(255, 255, 255);
             width: 100%;
@@ -118,14 +123,26 @@
     <br>
     <table>
         <tr>
-            <th colspan="2">Cartões de Crédito</th>
+            <th colspan="3">Cartões de Crédito</th>
         </tr>
         <tr>
-            <td>Cartão Visa</td>
+            <td><input type="radio" name="cartao" value="Físico"></td>
+            <td>Cartão Físico</td>
             <td><a href="#">Ver Detalhes</a></td>
         </tr>
         <tr>
-            <td>Cartão MasterCard</td>
+            <td><input type="radio" name="cartao" value="iFood"></td>
+            <td>Cartão Virtual iFood</td>
+            <td><a href="#">Ver Detalhes</a></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="cartao" value="Compra Exterior"></td>
+            <td>Cartão Virtual Compra Exterior</td>
+            <td><a href="#">Ver Detalhes</a></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="cartao" value="Avulso"></td>
+            <td>Cartão Virtual Avulso</td>
             <td><a href="#">Ver Detalhes</a></td>
         </tr>
         <!-- Adicione mais cartões conforme necessário -->

@@ -3,8 +3,11 @@
         <title>Banco Pyramide</title>
         <style>
             *{padding: 0; margin: 0; box-sizing: border-box;}
-            body{
+            body {  
                 text-align: center;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column; 
             }
             header {
                 background: rgb(255, 255, 255);
@@ -161,6 +164,19 @@
                         <td><label for="senha"><font color="black">Senha:</font></label></td>
                         <td>
                             <input type="password" id="senha" name="senha" placeholder="Senha" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,20}$"required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="Validação"><font color="black">Validação (selecione 3):</font></label></td>
+                        <td>
+                            <select name="Validação" id="Validação">
+                                <option value="null">-</option>
+                                <option value="um">1</option>
+                                <option value="dois">2</option>
+                                <option value="tres">3</option>
+                                <option value="quatro">4</option>
+                                <option value="cinco">5</option>
+                            </select>
                         </td>
                     </tr>
                     <tr><td></td><td><input type="submit" value="Login" class="custom-button"></td></tr>
