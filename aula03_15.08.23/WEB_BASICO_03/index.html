@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>Faculdade</title>
+    <style>
+        body {
+            background-color: rgb(50, 50, 50);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pedido de Disciplinas a Cursar</h1>
+    <p>Preencha o formulário abaixo para fazer o seu pedido de disciplinas a cursar:</p>
+    
+    <form action="WEB_BASICO_03\processar_pedido.html" method="post">
+        <table>
+            <tr>
+                <td><label for="nome">Nome:</label></td>
+                <td><input type="text" id="nome" name="nome" placeholder="Nome" pattern="[A-z]{1,20}" maxlength="20" required><br></td>
+            </tr>
+            <tr>
+                <td><label for="email">E-mail:</label></td>
+                <td><input type="email" id="email" name="email" placeholder="email@exemplo.com" required><br></td>
+            </tr>
+            <tr>
+                <td><label for="celular">Celular:</label></td>
+                <td><input type="text" id="celular" name="celular" placeholder="(00)00000-0000" maxlength="15" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" required><br></td>
+            </tr>
+        </table>
+
+      <p><h2><b>Qual o turno?</b></h2></p>
+      <input type="range" name="points" min="1" max="3"><br/>
+      <i>manhã - tarde - noite</i><br><br>
+
+      <Table>
+        <td><h2>Quais matérias irá cursar?</h2></td>
+        <td><p><img src="WEB_BASICO_03\curso.png" width="50"></p></td>
+      </Table>
+      
+        <label>
+            <input type="checkbox" name="materias[]">
+            Desenvolvimento Web Básico
+        </label><br>
+        <label>
+            <input type="checkbox" name="materias[]">
+            Desenvolvimento de Software Visual
+        </label><br>
+        <label>
+            <input type="checkbox" name="materias[]">
+            Iniciação a Algoritmo
+        </label><br>
+        <label>
+            <input type="checkbox" name="materias[]">
+            Arquitetura de Software
+        </label><br>
+        <label>
+            <input type="checkbox" name="materias[]">
+            Pesquisa e Sociedade
+        </label><br>
+        <label>
+            <input type="checkbox" name="materias[]">
+            Libras
+        </label><br>
+
+      <br></br>
+
+      <label for="observações">Observações:</label><br>
+      <textarea id="observações" name="observações" rows="4" cols="50"></textarea><br><br>
+      
+      <input type="submit" value="Enviar Pedido">
+    </form>
+    
+    </body>
+    </html>
