@@ -9,7 +9,7 @@
             <p>Preencha o formulário abaixo para fazer o seu pedido de disciplinas a cursar:</p>
             
             <form action="processar_pedido.html" method="post">
-                <table border="1" bgcolor="grey">
+                <table>
                     <tr>
                         <td><label for="nome"><font color="black">Nome:</font></label></td>
                         <td><input type="text" id="nome" name="nome" placeholder="Nome" pattern="[A-z]{1,20}" maxlength="20" required><br></td>
@@ -30,127 +30,90 @@
             <i>manhã - tarde - noite</i><br><br>
 
             <h2>Quais matérias irá cursar?</h2>
-            <table>
-                
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox" name="materias[]">
-                            Desenvolvimento Web Básico
-                        </label>
-                    </td>
-                    <td>
-                        <select name="dia" id="dia">
-                            <option value="null">-</option>
-                            <option value="seg">segunda</option>
-                            <option value="ter">terça</option>
-                            <option value="qua">quarta</option>
-                            <option value="qui">quinta</option>
-                            <option value="sex">sexta</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox" name="materias[]">
-                            Desenvolvimento de Software Visual
-                        </label>
-                    </td>
-                    <td>
-                        <select name="dia" id="dia">
-                            <option value="null">-</option>
-                            <option value="seg">segunda</option>
-                            <option value="ter">terça</option>
-                            <option value="qua">quarta</option>
-                            <option value="qui">quinta</option>
-                            <option value="sex">sexta</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox" name="materias[]">
-                            Iniciação a Algoritmo
-                        </label>
-                    </td>
-                    <td>
-                        <select name="dia" id="dia">
-                            <option value="null">-</option>
-                            <option value="seg">segunda</option>
-                            <option value="ter">terça</option>
-                            <option value="qua">quarta</option>
-                            <option value="qui">quinta</option>
-                            <option value="sex">sexta</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox" name="materias[]">
-                            Arquitetura de Software
-                        </label>
-                    </td>
-                    <td>
-                        <select name="dia" id="dia">
-                            <option value="null">-</option>
-                            <option value="seg">segunda</option>
-                            <option value="ter">terça</option>
-                            <option value="qua">quarta</option>
-                            <option value="qui">quinta</option>
-                            <option value="sex">sexta</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox" name="materias[]">
-                            Pesquisa e Sociedade
-                        </label>
-                    </td>
-                    <td>
-                        <select name="dia" id="dia">
-                            <option value="null">-</option>
-                            <optgroup label="Presencial">
-                                <option value="seg">segunda</option>
-                            <option value="ter">terça</option>
-                            <option value="qua">quarta</option>
-                            <option value="qui">quinta</option>
-                            <option value="sex">sexta</option>
-                            </optgroup>
-                            <optgroup label="Remoto">
-                                <option value="ead">ead</option>
-                            </optgroup>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>
-                            <input type="checkbox" name="materias[]">
-                            Libras
-                        </label>
-                    </td>
-                    <td>
-                        <select name="dia" id="dia">
-                            <option value="null">-</option>
-                            <optgroup label="Presencial">
-                                <option value="seg">segunda</option>
-                            <option value="ter">terça</option>
-                            <option value="qua">quarta</option>
-                            <option value="qui">quinta</option>
-                            <option value="sex">sexta</option>
-                            </optgroup>
-                            <optgroup label="Remoto">
-                                <option value="ead">ead</option>
-                            </optgroup>
-                        </select>
-                    </td>
-                </tr>
-            </table>
+            <div class="container">
+                <label>
+                    <input type="checkbox" name="materias[]">
+                    Desenvolvimento Web Básico
+                </label>
+                <select name="dia" id="dia">
+                    <option value="null">-</option>
+                    <option value="seg">segunda</option>
+                    <option value="ter">terça</option>
+                    <option value="qua">quarta</option>
+                    <option value="qui">quinta</option>
+                    <option value="sex">sexta</option>
+                </select>
+                <label>
+                    <input type="checkbox" name="materias[]">
+                    Desenvolvimento de Software Visual
+                </label>
+                <select name="dia" id="dia">
+                    <option value="null">-</option>
+                    <option value="seg">segunda</option>
+                    <option value="ter">terça</option>
+                    <option value="qua">quarta</option>
+                    <option value="qui">quinta</option>
+                    <option value="sex">sexta</option>
+                </select>
+                <label>
+                    <input type="checkbox" name="materias[]">
+                    Iniciação a Algoritmo
+                </label>
+                <select name="dia" id="dia">
+                    <option value="null">-</option>
+                    <option value="seg">segunda</option>
+                    <option value="ter">terça</option>
+                    <option value="qua">quarta</option>
+                    <option value="qui">quinta</option>
+                    <option value="sex">sexta</option>
+                </select>
+                <label>
+                    <input type="checkbox" name="materias[]">
+                    Arquitetura de Software
+                </label>
+                <select name="dia" id="dia">
+                    <option value="null">-</option>
+                    <option value="seg">segunda</option>
+                    <option value="ter">terça</option>
+                    <option value="qua">quarta</option>
+                    <option value="qui">quinta</option>
+                    <option value="sex">sexta</option>
+                </select>
+                <label>
+                    <input type="checkbox" name="materias[]">
+                    Pesquisa e Sociedade
+                </label>
+                <select name="dia" id="dia">
+                    <option value="null">-</option>
+                    <optgroup label="Presencial">
+                        <option value="seg">segunda</option>
+                    <option value="ter">terça</option>
+                    <option value="qua">quarta</option>
+                    <option value="qui">quinta</option>
+                    <option value="sex">sexta</option>
+                    </optgroup>
+                    <optgroup label="Remoto">
+                        <option value="ead">ead</option>
+                    </optgroup>
+                </select>
+                <label>
+                    <input type="checkbox" name="materias[]">
+                    Libras
+                </label>
+                <select name="dia" id="dia">
+                    <option value="null">-</option>
+                    <optgroup label="Presencial">
+                        <option value="seg">segunda</option>
+                    <option value="ter">terça</option>
+                    <option value="qua">quarta</option>
+                    <option value="qui">quinta</option>
+                    <option value="sex">sexta</option>
+                    </optgroup>
+                    <optgroup label="Remoto">
+                        <option value="ead">ead</option>
+                    </optgroup>
+                </select>
+            </div>
 
             <br></br>
 
