@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Pedido de Disciplinas a Cursar</title>
+        <link rel="stylesheet" href="style.css">
+        <script>
+            
+            alert("Enviado pedido");
+
+            let lista = [1,2,3,4,5];
+
+            mult = lista[1] * lista[3];
+
+            soma = lista[0] + lista[2] + lista[4];
+
+        </script>
+    </head>
+    <body>
+        <main>
+            <br>
+            <caption><h1>Pedido de Disciplinas a Cursar</h1></caption>
+            <div class="container">
+                <label>
+                    <font color= "19FFC0">Pedido realizado</font>
+                </label>
+                <label>
+                    <img src="imagens/curso.png" width="40">
+                </label>
+            </div>
+
+            <p><h2><b>Conseguiu ajustar as materias necessarias?</b></h2></p>
+            <label><input type="radio" name="avaliacao" value="sim">Sim</label><br/>
+            <label><input type="radio" name="avaliacao" value="nao">Não</label><br/>
+            <label><input type="radio" name="avaliacao" value="quase">Quase</label><br/><br/>
+
+            <input type="submit" value="Enviar avaliacao"><br>
+
+            <script>
+                document.write(soma, "<br>");
+                document.write(mult, "<br>");
+            </script>
+        </main>
+    </body>
+</html>
